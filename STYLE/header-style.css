@@ -1,0 +1,257 @@
+header{
+    background-color: teal;
+    text-align: center;
+    position: relative;
+    z-index: 999;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background-color: teal;
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: left;
+    transition:transform 400ms ease-in-out
+    
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a{
+    color: #0023FF;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+.hero-text p{
+    color: black;
+    font-family:sans-serif;
+    text-align: start;
+    font-weight: 500;
+    font-size: small;
+}
+
+
+.hero-text h1{
+    color: black;
+    text-align: center;
+    
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+    margin: 15px;
+    padding: 5px;
+}
+nav a:hover{
+    color: blue;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+ }
+
+ .nav-toggle{
+    display: none;
+}
+
+.nav-toggle-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    display: block;
+    background: chocolate;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before{
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after{
+    top: 7px;
+}
+
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+
+}
+
+
+@media screen and (min-width:800px){
+
+    header{
+        display: grid;
+        grid-template-columns: 1fr minmax(600px,1fr) ;
+        padding-left: 0;
+    }
+
+    .nav-toggle-label{
+        display: none;
+    }
+
+
+    .logo{
+        grid-column: 1/2;
+       display: flex;
+       margin-left: 50px;
+    }
+
+
+    nav{
+        all: unset;
+        grid-column: 2/2;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 50px;
+
+    }
+
+
+    nav a{
+
+        opacity: 1;
+        position: relative;
+    }
+
+
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+       
+    }
+    
+
+    nav li{
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+
+
+    
+    nav a::before{
+        content: '';
+        display: block;
+        height: 5px;
+        background: rgb(38, 0, 255);
+        position: absolute;
+        top: -0.75em;
+        right: 0;
+        left: 0;
+        transform: scale(0,1);
+        transition: transform ease-in-out 250ms;
+    }
+
+
+    nav a:hover::before{
+        transform: scale(1,1);
+    }
+}
+/*=================================================================================================================*/
+
+.section-2{
+    margin-top: 20px;
+    background: springgreen;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr ;
+    padding: 0;
+}
+
+.section-2-contect{
+    background: wheat;
+}
+
+.image-text{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: green;
+}
+
+.media-icon-holder{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background: yellow;
+    padding: 10px;
+}
+
+.media-1 .media-2 .media-3{
+    display: flex;
+    height: 10px;
+    height: 10px;
+}
+
+.round-image para{
+    display: flex;
+    text-align: center;
+}
+.round-image img{
+
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    display: flex;
+    grid-column: 2/2;
+    justify-content: flex-end;
+    margin-right: 0;
+}
+
+.media-icon-holder-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 15px;
+    padding: 10px;
+}
+
+.media-icon-holder-2 img{
+    height: 50px;
+    width: 50px;
+    margin: 15px;
+    padding: 5px;
+}
+
+.media-icon-holder-2 :hover img{
+    height: 50px;
+    width: 50px;
+    margin: 15px;
+    padding: 10px;
+    transition: 1s ease-in-out;
+}
