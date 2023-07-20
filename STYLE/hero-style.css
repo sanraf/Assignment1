@@ -27,6 +27,7 @@
 .hero-text p{
     font-size: 1.4rem;
     margin-bottom: 12px;
+    
 }
 
 
@@ -37,13 +38,12 @@ button{
     font-size: 0.85rem;
     text-transform: uppercase;
     text-align: center;
-    
-    white-space: nowrap;
+    cursor: pointer;
 
 }
 
 .prim-button{
-    background: blue;
+    background: rgb(115, 115, 211);
     color: white;
     border: none;
     padding: 10px;
@@ -52,26 +52,23 @@ button{
 
 .prim-button:hover{
     background: rgb(73, 73, 214);
-    color: white;
-    cursor: pointer;
-    font-size: .95rem;
-    transition: 1s ;
+    font-size: .90rem;
+    transition: 500ms ;
 }
 
 .sec-button{
     color: black;
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 8px;
 }
   
 
 .sec-button:hover{
     background: wheat;
-    cursor: pointer;
-    color: rgb(3, 3, 3);
-    border: 2px solid white;
-    font-size: .95rem;
-    transition: 1s;
+    color: rgb(20, 19, 19);
+    border: 1px solid white;
+    font-size: .90rem;
+    transition: 500ms;
 }
 
 
@@ -97,7 +94,6 @@ button{
         width: 60%;
         height: 250px;
        
-    
     }
 }
     @media (max-width:678px){

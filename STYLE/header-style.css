@@ -8,16 +8,16 @@ header{
     padding: 0;
 }
 
-nav{
+.top-nav{
     position: absolute;
     text-align: left;
     top: 100%;
     left: 0;
     background-color: teal;
     width: 100%;
-    transform: scale(1,0);
-    transform-origin: left;
-    transition:transform 400ms ease-in-out
+    transform: rotate(90deg);
+    transform-origin: right;
+    transition:transform 900ms ease-in-out
     
 }
 
@@ -35,7 +35,7 @@ nav li{
 nav a{
     color: #0023FF;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-transform: uppercase;
     opacity: 0;
     transition: opacity 150ms ease-in-out;
@@ -64,10 +64,12 @@ nav a{
 }
 nav a:hover{
     color: blue;
+    
 }
 
 .nav-toggle:checked ~ nav {
     transform: scale(1,1);
+    
  }
 
  .nav-toggle{
@@ -136,7 +138,7 @@ nav a:hover{
     }
 
 
-    nav{
+    .top-nav{
         all: unset;
         grid-column: 2/2;
         display: flex;
@@ -151,6 +153,9 @@ nav a:hover{
 
         opacity: 1;
         position: relative;
+        font-size: 1.3rem;
+        font-weight: 500;
+        transition: opacity 150ms ease-in-out;
     }
 
 
@@ -184,54 +189,73 @@ nav a:hover{
 
     nav a:hover::before{
         transform: scale(1,1);
+    
     }
 }
 /*=================================================================================================================*/
 
 .section-2{
     margin-top: 20px;
-    background: springgreen;
+    background: hsl(150, 100%, 50%,0);
     display: grid;
     grid-template-rows: 1fr 1fr 1fr ;
     padding: 0;
+
 }
 
-.section-2-contect{
-    background: wheat;
+.section-2-content{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 8px;
+    justify-content: center;
+    background: hsl(39, 77%, 83%,0.4);
 }
 
 .image-text{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: green;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 26px;
+    padding: 12px;
+    margin: 0 36px 0 36px;
+    justify-content: center;
 }
 
 .media-icon-holder{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    background: yellow;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
     padding: 10px;
+    align-items: center;
 }
 
-.media-1 .media-2 .media-3{
-    display: flex;
-    height: 10px;
-    height: 10px;
+.media-icon-holder img{
+    width: 36px;
+    height: 36px;
 }
+
+
+.media-1:hover img{
+
+    padding: 10px;
+    transition: 600ms ease-in-out;
+    cursor: pointer;
+}
+
+
+
 
 .round-image para{
     display: flex;
-    text-align: center;
+    text-align: start;
 }
 .round-image img{
 
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
-    display: flex;
-    grid-column: 2/2;
-    justify-content: flex-end;
-    margin-right: 0;
+    height: 64px;
+    width: 64px;
+    border-radius: 32px;
+   
 }
 
 .media-icon-holder-2{
@@ -248,10 +272,56 @@ nav a:hover{
     padding: 5px;
 }
 
-.media-icon-holder-2 :hover img{
-    height: 50px;
-    width: 50px;
-    margin: 15px;
-    padding: 10px;
-    transition: 1s ease-in-out;
+
+footer{
+
+    display: flex;
+    justify-content: space-around;
+    background-color: teal;
+        
 }
+
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bottom ul{
+    margin-top: 14px;
+   display: flex;
+   flex-direction: column;
+}
+
+.bottom a{
+    color: #0023FF;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    opacity: 1;
+    transition: opacity 150ms ease-in-out;
+}
+
+@media screen and (min-width:800px){
+
+    .bottom ul{
+       flex-direction: row;
+     
+    }
+
+    .bottom a{
+
+        font-size: 1.2rem;
+    }
+
+        
+    .bottom .media-icon-holder-2{
+        justify-self: end;
+    }
+}
+
+
+
