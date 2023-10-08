@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
         <meta name="viewpor" content="width=device-width, initial-scale=1.0"> 
         <title>My page</title>
@@ -7,14 +8,20 @@
         <link rel="stylesheet" href="STYLE/header-style.css">
         <link rel="stylesheet" href="STYLE/hero-style.css">
         <link rel="stylesheet" href="STYLE/cards-style.css">
+        <link rel="stylesheet" href="./STYLE/products.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     </head>
    
     <body>
+
         <header> 
-            <img class="logo" src="ICON/icons8-moon-phase-96.png" alt="">
+            <div class="brand-holder">
+                <img class="logo" src="ICON/icons8-open-book-64.png" alt="">
+                <p class="brand">Novel Nest</p>
+            </div>
+            
             
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
 
@@ -31,11 +38,15 @@
         </header>
 
         <div class="container">
-            <img src="ICON/stat.png" alt="hero image">
+            <div class="book-image">
+                
+            </div>
+            <!-- <img src="ICON/homee-removebg-preview.png" alt="hero image"> -->
             <div class="hero-text">
-                <h1>Hero Section Heading</h1>
+                <h1>Get 50% off on new books</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et netus et malesuada fames. Id eu nisl nunc mi.
+                   A series of fiction finds that ranges from the reimagined journey of of the author,experince ,family and everything in between.
+                   sit back ,relax and find comfortable spot and enjoy your favourite books
                 </p>
                 <button class="prim-button"> Primary Button </button>
                 <button class="sec-button">Secondary Button</button>
@@ -44,148 +55,140 @@
 
         <div class="divider"></div>
 
-        <div class="card-holder">
+        <div class="catergory-container">
 
-            <div class="card">
-
-                <div class="imageCard">
-                    <img src="ICON/fictionicon.png" alt="prio">
-                </div>
-                <div class="content">
-                    <div class="details">
-                        <h2>Heading</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                             labore et dolore magna aliqua.
-                            </p>
-        
-                       >
-                    </div>
-                </div>
-            
-            
+            <div class="card-holder_header">
+                <hr> <h1>categories</h1> <hr>
             </div>
 
-            <div class="card">
-                <div class="imageCard">
-                    <img src="ICON/fictionicon.png" alt="prio">
-                </div>
-                <div class="content">
-                    <div class="details">
-                        <h2>Heading</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                             labore et dolore magna aliqua.
-                            </p>
+            <div class="card-holder">
+
+
+           
+           
+                <div class="card-wrap">
+                    <div class="card-image">
+                      <img src="./ICON/horror.jpg"></img>
                     </div>
-                </div>
+                    <div class="book-content">
+                      <h5 >Horror</h5>
+                      <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                     
+                   </div>
+                  </div> 
+    
+                  <div class="card-wrap">
+                    <div class="card-image">
+                      <img src="./ICON/thriller.jpg"></img>
+                    </div>
+                    <div class="book-content">
+                      <h5 >Thrller</h5>
+                      <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                     
+                   </div>
+                  </div> 
+    
+                  <div class="card-wrap">
+                    <div class="card-image">
+                      <img src="./ICON/love.jpg"></img>
+                    </div>
+                    <div class="book-content">
+                      <h5 >Love</h5>
+                      <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                     
+                   </div>
+                  </div> 
+    
+                  <div class="card-wrap">
+                    <div class="card-image">
+                      <img src="./ICON/novel.jpg"></img>
+                    </div>
+                    <div class="book-content">
+                      <h5 >Novel</h5>
+                      <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                     
+                   </div>
+                  </div> 
+    
             </div>
 
-            <div class="card">
-                <div class="imageCard">
-                    <img src="ICON/fictionicon.png" alt="prio">
+            <div class="discount-board">
+                <div class="sub-board">
+                    <strong>Novel Nest</strong>
+                    <h4>Get a discount offer upto<span> 60%</span> off when you order two or more books online</h4>
+                    <button>button</button>
                 </div>
-                <div class="content">
-                    <div class="details">
-                        <h2>Heading</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                             labore et dolore magna aliqua.
-                            </p>
-                    </div>
-                </div>
-            </div>
+              </div>
+    
 
         </div>
-
+ 
 
         <div class="divider"></div>
 
 
         <div class="products">
-            <div class="product">
-                <div class="image">
-                    <img src="ICON/fictionicon.png" alt="prio">
-                </div>
 
-                <div class="heading-holder">
-                    <h3>Card Heading</h3>
-                   
-                </div>
-
-                <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</P>
-
-                <div class="bay">
-                    <button>Action</button>
-                </div>
-
+            <div class="product-holder_header">
+                <hr> <h1>best seller</h1> <hr>
             </div>
 
-            <div class="product">
-                <div class="image">
-                    <img src="ICON/fictionicon.png" alt="prio">
+            <div class="product-card">
+                <div class="cover-1"></div>
+                <div class="action-div">
+                    <h2 class="title">
+                        TITLE HERE
+                    </h2>
+                    <p class="summery">
+                      This is the description of this card.You can enter anything here.
+                    </p>
+                    <button class="action-btn">action</button>
                 </div>
 
-                <div class="heading-holder">
-                    <h3>Card Heading</h3>
+              </div>  
+
+              <div class="product-card">
+                <div class="cover-2"></div>
+                <div class="action-div">
+                    <h2 class="title">
+                        TITLE HERE
+                    </h2>
+                    <p class="summery">
+                      This is the description of this card.You can enter anything here.
+                    </p>
+                    <button class="action-btn">action</button>
                 </div>
 
-                <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</P>
-                
+              </div>  
 
-                <div class="bay">
-                    <button>Action</button>
+              <div class="product-card">
+                <div class="cover-3"></div>
+                <div class="action-div">
+                    <h2 class="title">
+                        TITLE HERE
+                    </h2>
+                    <p class="summery">
+                      This is the description of this card.You can enter anything here.
+                    </p>
+                    <button class="action-btn">action</button>
                 </div>
 
-            </div>
+              </div> 
 
-            <div class="product">
-                <div class="image">
-                    <img src="ICON/fictionicon.png" alt="prio">
+              <div class="product-card">
+                <div class="cover-4"></div>
+                <div class="action-div">
+                    <h2 class="title">
+                        TITLE HERE
+                    </h2>
+                    <p class="summery">
+                      This is the description of this card.You can enter anything here.
+                    </p>
+                    <button class="action-btn">action</button>
                 </div>
 
-                <div class="heading-holder">
-                    <h3>Card Heading</h3>
-                </div>
-
-                <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</P>
-                <div class="stars">
-                    <i class="fa-solid"></i>
-                    <i class="fa-solid"></i>
-                    <i class="fa-solid"></i>
-                    <i class="fa-solid"></i>
-                    <i class="fa-solid"></i>
-                </div>
-
-                <div class="bay">
-                    <button>Action</button>
-                </div>
-
-            </div>
-
-            <div class="product">
-                <div class="image">
-                    <img src="ICON/fictionicon.png" alt="prio">
-                </div>
-
-                <div class="heading-holder">
-                    <h3>Card Heading</h3>
-                </div>
-
-                <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</P>
-                <div class="stars">
-                    <i class="fa-solid"></i>
-                    <i class="fa-solid"></i>
-                    <i class="fa-solid"></i>
-                    <i class="fa-solid"></i>
-                    <i class="fa-solid"></i>
-                </div>
-
-                <div class="bay">
-                    <button>Action</button>
-                </div>
-
-            </div>
+              </div> 
+           
 
        </div>
 

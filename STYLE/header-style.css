@@ -1,5 +1,8 @@
+
 header{
-    background-color: teal;
+ 
+    /* background: linear-gradient(45deg,#0023FF,#000000 );/ */
+    background-color: #0000ff;
     text-align: center;
     position: relative;
     z-index: 999;
@@ -11,14 +14,27 @@ header{
 .top-nav{
     position: absolute;
     text-align: left;
-    top: 100%;
     left: 0;
-    background-color: teal;
+    background-color: blue;
     width: 100%;
-    transform: rotate(90deg);
+    transform: scale(0);
     transform-origin: right;
     transition:transform 900ms ease-in-out
     
+}
+
+
+
+.brand-holder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
+}
+
+.brand{
+    color:#C822FF;
+    font-family: cursive;
+
 }
 
 nav ul{
@@ -33,7 +49,7 @@ nav li{
 }
 
 nav a{
-    color: #0023FF;
+    color: #C822FF;
     text-decoration: none;
     font-size: 1rem;
     text-transform: uppercase;
@@ -56,14 +72,11 @@ nav a{
     
 }
 
-.logo{
-    height: 50px;
-    width: 50px;
-    margin: 15px;
-    padding: 5px;
-}
+
 nav a:hover{
-    color: blue;
+    color: #cd38ff;
+    transform: scale(5,5);
+    /* transition:trtransform 1500ms ease-in-out; */
     
 }
 
@@ -130,14 +143,25 @@ nav a:hover{
         display: none;
     }
 
+    .brand-holder{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 15px;
+    }
+
+
 
     .logo{
         grid-column: 1/2;
        display: flex;
-       margin-left: 50px;
+       /* margin-left: 50px; */
     }
 
 
+  
+
+   
     .top-nav{
         all: unset;
         grid-column: 2/2;
@@ -177,7 +201,7 @@ nav a:hover{
         content: '';
         display: block;
         height: 5px;
-        background: rgb(38, 0, 255);
+        background: #781499;
         position: absolute;
         top: -0.75em;
         right: 0;
@@ -238,8 +262,8 @@ nav a:hover{
 
 .media-1:hover img{
 
-    padding: 10px;
-    transition: 600ms ease-in-out;
+    transform: scale(1.2,1.2);
+    transition: transform 600ms ease-in-out;
     cursor: pointer;
 }
 
@@ -266,8 +290,8 @@ nav a:hover{
 }
 
 .media-icon-holder-2 img{
-    height: 50px;
-    width: 50px;
+    height: 36px;
+    width: 36px;
     margin: 15px;
     padding: 5px;
 }
@@ -277,7 +301,7 @@ footer{
 
     display: flex;
     justify-content: space-around;
-    background-color: teal;
+    background-color: #0000ff;
         
 }
 
@@ -297,7 +321,7 @@ footer{
 }
 
 .bottom a{
-    color: #0023FF;
+    color: #C822FF;
     text-decoration: none;
     font-size: 1rem;
     text-transform: uppercase;
