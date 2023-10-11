@@ -8,8 +8,10 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     padding-bottom: 3.75rem;
+    background-color: #ffffff;
 }
 
 .testimonial-holder_header{
@@ -30,18 +32,19 @@
   
   .testimonial-holder_header h1{
     text-transform: uppercase;
-    margin: 0 8px;
     color: #00a1fe;
   }
 
   .card-grid{
       
     width: 90%;
-    margin: 0 auto;
+    margin: 0 ;
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 25px;
-    column-gap: 25px; 
+    column-gap: 25px;
+    padding: 3px;
 
 
   }
@@ -54,20 +57,21 @@
     align-items: center;
     justify-content: space-between;
    box-shadow: 0px 0px 10px #000000;
-    background: linear-gradient(90deg ,rgb(22, 115, 134)  24%,rgb(16, 119, 140) 58%,rgba(2, 74, 88, 0.967)100%)
+   background-color: #dcdada;
 }
 
 .content-div{
     width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
+    justify-content: space-between;
     gap: 1rem;
-    padding: 2rem 1.2rem;
+    padding: 1rem 1.2rem;
 }
 
-.card-one h1{
-    text-align: center;
+.card-one p{
+    text-align: start;
 }
 
 
@@ -231,7 +235,12 @@
  }
 
 
-@media (max-width: 800px) { .card-grid { grid-template-columns: repeat(1, 1fr); width: 90%; } } 
+@media (max-width: 1088px) { 
+  .card-grid {
+     display: flex; 
+     flex-direction: column;
+    }
+ } 
 
 @keyframes bounce_613 {
     40% {
