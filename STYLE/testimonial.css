@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.testimonial-card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 3.75rem;
+}
+
+.testimonial-holder_header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto 2rem 0;
+  }
+  
+  .testimonial-holder_header hr{
+    height: 4px;
+    background-color: #00a1fe;
+    width: 15%;
+    border-radius: 12PX;
+    border: none;
+  }
+  
+  .testimonial-holder_header h1{
+    text-transform: uppercase;
+    margin: 0 8px;
+    color: #00a1fe;
+  }
+
+  .card-grid{
+      
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 25px;
+    column-gap: 25px; 
+
+
+  }
+
+.card-one{
+    width: 100%;
+    height: 280px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   box-shadow: 0px 0px 10px #000000;
+    background: linear-gradient(90deg ,rgb(22, 115, 134)  24%,rgb(16, 119, 140) 58%,rgba(2, 74, 88, 0.967)100%)
+}
+
+.content-div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    padding: 2rem 1.2rem;
+}
+
+.card-one h1{
+    text-align: center;
+}
+
+
+
+[class*='card-profile-']{
+  width: 230px;
+  height: 100%;
+  margin: 0;
+ 
+}
+
+.card-profile-one{
+    background:url('../ICON/profile1.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+.card-profile-two{
+  background: url('../ICON/profile2.jpeg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+}
+
+.card-profile-three{
+  background: url('../ICON/profile3.jpeg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+}
+
+.card-profile-four{
+  background: url('../ICON/profile4.jpeg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+}
+
+.media-card {
+    position: relative;
+    left: 0%;
+    /* top: 25px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    height: 50px;
+    width: 200px;
+  }
+
+  .media-card::before, .media-card::after {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    transition: 0.25s linear;
+    z-index: 1;
+  }
+
+  .media-card::before {
+    content: "";
+    left: 0;
+    justify-content: flex-end;
+    background-color: rgb(213, 213, 213) ;
+  }
+
+  .media-card::after {
+    content: "";
+    right: 0;
+    justify-content: flex-start;
+    background-color: rgb(168, 168, 168);
+  }
+
+  .media-card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
+  
+
+  .media-card:hover span {
+    opacity: 0;
+    z-index: -3;
+  }
+
+  .media-card:hover::before {
+    opacity: 0.5;
+    transform: translateY(-100%);
+  }
+
+  .media-card:hover::after {
+    opacity: 0.5;
+    transform: translateY(100%);
+  }
+
+  .media-card span {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #00a1fe;
+    font-family: 'Fira Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    opacity: 1;
+    transition: opacity 0.25s;
+    z-index: 2;
+  }
+
+  .media-card .social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    /* color: whitesmoke; */
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.25s;
+  }
+
+  .media-card .facebook{
+    color: #039BE5;
+  }
+  
+  .media-card .twitter{
+    color:#2AA4F4;
+  }
+
+  .media-card .linkedin{
+    color:#0288D1;
+  }
+
+  .media-card .whatsapp{
+    color:#40C351;
+  }
+  
+
+ 
+
+  .media-card .social-link svg {
+    text-shadow: 1px 1px rgba(31, 75, 121, 0.492);
+    transform: scale(1);
+  }
+
+  .media-card .social-link:hover {
+    background-color: rgba(88, 95, 92, 0.825);
+    animation: bounce_613 0.400ms linear;
+  }
+  
+
+ .media-card svg {
+   height: 25px;
+ }
+
+
+@media (max-width: 800px) { .card-grid { grid-template-columns: repeat(1, 1fr); width: 90%; } } 
+
+@keyframes bounce_613 {
+    40% {
+      transform: scale(1.4);
+    }
+  
+    60% {
+      transform: scale(0.8);
+    }
+  
+    80% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  } 
